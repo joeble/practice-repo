@@ -3,8 +3,18 @@ const filterDirectory = require('./modulefile.js')
 const arg1 = process.argv[2]
 const arg2 = process.argv[3]
 
-const directoryName = arg1
-const extensionToFilterBy = arg2
+const directory = arg1
+const filter = arg2
 
-// runs the imported module
-filterDirectory(directoryName, extensionToFilterBy)
+const callback = (err, list) => {
+	if (err) {
+		return console.error('Here is an error:', err)
+	}
+
+	list.forEach((item) => {
+		console.log(item)
+	})
+	
+}
+
+filterDirectory(directory, filter, callback)
