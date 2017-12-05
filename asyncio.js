@@ -3,8 +3,9 @@
 
 const fs = require('fs')
 
-const callbackFunction = (err, data) => {
+const callback = (err, data) => {
+	if (err) console.error(err)
 	console.log(data.toString().split('\n').length - 1)
 }
 
-fs.readFile(process.argv[2], callbackFunction)
+fs.readFile(process.argv[2], callback)
