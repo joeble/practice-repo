@@ -1,4 +1,3 @@
-const fs = require('fs')
 const http = require('http')
 const map = require('through2-map')
 
