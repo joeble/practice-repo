@@ -3,7 +3,7 @@ function LinkedList () {
   this.tail = null
 }
 
-// a node object to represent each value in line
+// a Node object to represent each value in line
 function Node (value) {
   this.value = value
   this.next = null
